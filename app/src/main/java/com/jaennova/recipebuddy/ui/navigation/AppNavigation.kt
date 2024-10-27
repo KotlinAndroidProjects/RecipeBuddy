@@ -1,15 +1,16 @@
 package com.jaennova.recipebuddy.ui.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.jaennova.recipebuddy.data.model.Category
 import com.jaennova.recipebuddy.ui.screens.DetailScreen
 import com.jaennova.recipebuddy.ui.screens.HomeScreen
+import com.jaennova.recipebuddy.ui.screens.ProfileScreen
+import com.jaennova.recipebuddy.ui.screens.componets.BottomNavItem
+import com.jaennova.recipebuddy.ui.screens.SearchScreen
 
 @Composable
 fun AppNavigation() {
@@ -23,7 +24,8 @@ fun AppNavigation() {
             HomeScreen(
                 navigateToDetail = { mealId ->
                     navController.navigate(Screen.Detail.createRoute(mealId))
-                }
+                },
+                navController = navController
             )
         }
 
@@ -40,6 +42,13 @@ fun AppNavigation() {
                 mealId = mealId ?: "",
                 onBackClick = { navController.popBackStack() }
             )
+        }
+
+        composable(BottomNavItem.Search.route) {
+            SearchScreen(navController)
+        }
+        composable(BottomNavItem.Profile.route) {
+            ProfileScreen(navController)
         }
     }
 }
