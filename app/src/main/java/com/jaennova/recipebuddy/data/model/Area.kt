@@ -4,6 +4,6 @@ data class AreaItem(
     val strArea: String
 )
 
-data class AreaList(
+data class AreaListResponse(
     val meals: List<AreaItem>?
 )

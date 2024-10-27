@@ -1,6 +1,6 @@
 package com.jaennova.recipebuddy.data.api
 
-import com.jaennova.recipebuddy.data.model.AreaList
+import com.jaennova.recipebuddy.data.model.AreaListResponse
 import com.jaennova.recipebuddy.data.model.CategoryList
 import com.jaennova.recipebuddy.data.model.CategoryListResponse
 import com.jaennova.recipebuddy.data.model.FilterResponse
@@ -38,12 +38,11 @@ interface ApiService {
 
     // List all categories
     @GET("list.php")
-    fun getCategoriesList(@Query("c") type: String = "list"): Call<CategoryList>
+    fun getCategoriesList(@Query("c") type: String = "list"): Call<CategoryListResponse>
 
     // List all areas
     @GET("list.php")
-    fun getAreasList(@Query("a") type: String = "list"): Call<AreaList>
-
+    fun getAreasList(@Query("a") type: String = "list"): Call<AreaListResponse>
     // List all ingredients
     @GET("list.php")
     fun getIngredientsList(@Query("i") type: String = "list"): Call<IngredientList>
