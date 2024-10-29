@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.screens.search
+package com.jaennova.recipebuddy.ui.screens.appcomponets
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,7 +16,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun EmptyState(
+fun ScreenEmptyState(
     message: String,
     modifier: Modifier = Modifier
 ) {
