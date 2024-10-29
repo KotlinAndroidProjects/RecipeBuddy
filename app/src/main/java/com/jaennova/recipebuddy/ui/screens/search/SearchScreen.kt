@@ -21,7 +21,7 @@ fun SearchScreen(navController: NavController) {
         topBar = { RecipeTopAppBar() },
         bottomBar = { RecipeBottomNavigation(navController) }
     ) { paddingValues ->
-        SearchFoodScreen(
+        RecipeSearch(
             modifier = Modifier.padding(paddingValues),
             viewModel = viewModel,
             onMealClick = { mealId ->
