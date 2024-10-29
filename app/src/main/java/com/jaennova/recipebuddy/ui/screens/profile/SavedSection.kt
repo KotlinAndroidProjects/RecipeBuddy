@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.screens.componets.profile
+package com.jaennova.recipebuddy.ui.screens.profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row

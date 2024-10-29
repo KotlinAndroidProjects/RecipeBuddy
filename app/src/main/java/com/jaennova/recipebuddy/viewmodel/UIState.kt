@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.viewmodel
+package com.jaennova.recipebuddy.viewmodel
 
 sealed class UIState<out T> {
     object Loading : UIState<Nothing>()

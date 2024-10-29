@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.screens.componets.home
+package com.jaennova.recipebuddy.ui.screens.home
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize

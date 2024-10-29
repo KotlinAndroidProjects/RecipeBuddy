@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.viewmodel
+package com.jaennova.recipebuddy.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

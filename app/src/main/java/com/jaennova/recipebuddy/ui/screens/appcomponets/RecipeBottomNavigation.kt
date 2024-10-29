@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.screens.componets
+package com.jaennova.recipebuddy.ui.screens.appcomponets
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home

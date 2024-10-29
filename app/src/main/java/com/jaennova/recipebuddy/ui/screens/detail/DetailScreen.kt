@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.screens
+package com.jaennova.recipebuddy.ui.screens.detail
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,10 +21,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jaennova.recipebuddy.data.model.Meal
-import com.jaennova.recipebuddy.ui.screens.componets.detail.DetailContent
-import com.jaennova.recipebuddy.ui.screens.componets.home.ErrorMessage
-import com.jaennova.recipebuddy.ui.viewmodel.DetailViewModel
-import com.jaennova.recipebuddy.ui.viewmodel.UIState
+import com.jaennova.recipebuddy.ui.screens.appcomponets.ErrorMessage
+import com.jaennova.recipebuddy.viewmodel.DetailViewModel
+import com.jaennova.recipebuddy.viewmodel.UIState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

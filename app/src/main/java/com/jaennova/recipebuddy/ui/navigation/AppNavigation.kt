@@ -6,11 +6,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.jaennova.recipebuddy.ui.screens.DetailScreen
-import com.jaennova.recipebuddy.ui.screens.HomeScreen
-import com.jaennova.recipebuddy.ui.screens.ProfileScreen
-import com.jaennova.recipebuddy.ui.screens.componets.BottomNavItem
-import com.jaennova.recipebuddy.ui.screens.SearchScreen
+import com.jaennova.recipebuddy.ui.screens.detail.DetailScreen
+import com.jaennova.recipebuddy.ui.screens.home.HomeScreen
+import com.jaennova.recipebuddy.ui.screens.profile.ProfileScreen
+import com.jaennova.recipebuddy.ui.screens.appcomponets.BottomNavItem
+import com.jaennova.recipebuddy.ui.screens.search.SearchScreen
 
 @Composable
 fun AppNavigation() {

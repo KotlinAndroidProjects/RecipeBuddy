@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.screens.componets.home
+package com.jaennova.recipebuddy.ui.screens.appcomponets
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.icons.Icons

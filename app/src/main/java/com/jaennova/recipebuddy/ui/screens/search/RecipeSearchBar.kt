@@ -1,6 +1,5 @@
-package com.jaennova.recipebuddy.ui.screens.componets.search
+package com.jaennova.recipebuddy.ui.screens.search
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -11,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -44,7 +42,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.jaennova.recipebuddy.data.model.Meal
-import com.jaennova.recipebuddy.ui.viewmodel.SearchFoodViewModel
+import com.jaennova.recipebuddy.viewmodel.SearchFoodViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -256,7 +254,6 @@ fun FiltersSection(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MealCard(
     meal: Meal,

@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.screens.componets.home
+package com.jaennova.recipebuddy.ui.screens.appcomponets
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,9 +10,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun LoadingIndicator() {
+fun LoadingIndicator(modifier: Modifier = Modifier) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .height(100.dp),
         contentAlignment = Alignment.Center

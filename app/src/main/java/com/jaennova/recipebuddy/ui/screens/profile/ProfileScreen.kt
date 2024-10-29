@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.screens
+package com.jaennova.recipebuddy.ui.screens.profile
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -8,11 +8,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.jaennova.recipebuddy.ui.screens.componets.RecipeBottomNavigation
-import com.jaennova.recipebuddy.ui.screens.componets.home.RecipeTopAppBar
-import com.jaennova.recipebuddy.ui.screens.componets.profile.CardProfile
-import com.jaennova.recipebuddy.ui.screens.componets.profile.CardRecipeSaved
-import com.jaennova.recipebuddy.ui.screens.componets.profile.SavedSection
+import com.jaennova.recipebuddy.ui.screens.appcomponets.RecipeBottomNavigation
+import com.jaennova.recipebuddy.ui.screens.appcomponets.RecipeTopAppBar
 
 @Composable
 fun ProfileScreen(navController: NavController) {

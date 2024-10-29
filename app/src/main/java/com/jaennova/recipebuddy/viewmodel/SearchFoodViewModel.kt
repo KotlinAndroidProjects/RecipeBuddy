@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.viewmodel
+package com.jaennova.recipebuddy.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.jaennova.recipebuddy.data.api.RetrofitClient
@@ -10,7 +10,6 @@ import com.jaennova.recipebuddy.data.model.MealSearchResponse
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

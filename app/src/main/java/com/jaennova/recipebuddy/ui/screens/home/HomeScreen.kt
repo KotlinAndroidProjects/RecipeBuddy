@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.screens
+package com.jaennova.recipebuddy.ui.screens.home
 
 import android.util.Log
 import androidx.compose.foundation.layout.Column
@@ -23,15 +23,12 @@ import androidx.navigation.compose.rememberNavController
 import com.jaennova.recipebuddy.data.model.Category
 import com.jaennova.recipebuddy.data.model.FilteredMeal
 import com.jaennova.recipebuddy.data.model.Meal
-import com.jaennova.recipebuddy.ui.screens.componets.RecipeBottomNavigation
-import com.jaennova.recipebuddy.ui.screens.componets.home.CategorySection
-import com.jaennova.recipebuddy.ui.screens.componets.home.ErrorMessage
-import com.jaennova.recipebuddy.ui.screens.componets.home.FoodCard
-import com.jaennova.recipebuddy.ui.screens.componets.home.LoadingIndicator
-import com.jaennova.recipebuddy.ui.screens.componets.home.RandomFoodCard
-import com.jaennova.recipebuddy.ui.screens.componets.home.RecipeTopAppBar
-import com.jaennova.recipebuddy.ui.viewmodel.HomeViewModel
-import com.jaennova.recipebuddy.ui.viewmodel.UIState
+import com.jaennova.recipebuddy.ui.screens.appcomponets.ErrorMessage
+import com.jaennova.recipebuddy.ui.screens.appcomponets.LoadingIndicator
+import com.jaennova.recipebuddy.ui.screens.appcomponets.RecipeBottomNavigation
+import com.jaennova.recipebuddy.ui.screens.appcomponets.RecipeTopAppBar
+import com.jaennova.recipebuddy.viewmodel.HomeViewModel
+import com.jaennova.recipebuddy.viewmodel.UIState
 
 @Composable
 fun HomeScreen(

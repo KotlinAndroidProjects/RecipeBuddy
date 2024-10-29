@@ -1,4 +1,4 @@
-package com.jaennova.recipebuddy.ui.viewmodel
+package com.jaennova.recipebuddy.viewmodel
 
 import com.jaennova.recipebuddy.data.model.Meal
 
