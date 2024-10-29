@@ -10,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.jaennova.recipebuddy.ui.screens.appcomponets.RecipeBottomNavigation
 import com.jaennova.recipebuddy.ui.screens.appcomponets.RecipeTopAppBar
+import com.jaennova.recipebuddy.ui.screens.appcomponets.ScreenEmptyState
 
 @Composable
 fun ProfileScreen(navController: NavController) {
@@ -18,8 +19,11 @@ fun ProfileScreen(navController: NavController) {
         bottomBar = { RecipeBottomNavigation(navController) }
     ) { paddingValues ->
         Column(modifier = Modifier.padding(paddingValues)) {
-                CardProfile()
-                SavedSection()
+            CardProfile()
+            SavedSection()
+            ScreenEmptyState(
+                message = "Aqui apareceran las recetas que guardes"
+            )
         }
     }
 }
