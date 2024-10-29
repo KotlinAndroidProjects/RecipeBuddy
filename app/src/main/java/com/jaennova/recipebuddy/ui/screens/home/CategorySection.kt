@@ -12,18 +12,23 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jaennova.recipebuddy.data.model.Category
+import com.jaennova.recipebuddy.viewmodel.HomeViewModel
 
 @Composable
 fun CategorySection(
     categories: List<Category>,
-    onCategorySelected: (Category) -> Unit,
+    viewModel: HomeViewModel,
     onViewAllClick: () -> Unit = {}
 ) {
+    val selectedCategory by viewModel.selectedCategory.observeAsState("Beef")
+
     Column {
         Row(
             modifier = Modifier
@@ -50,12 +55,14 @@ fun CategorySection(
             items(categories) { category ->
                 CategoryCard(
                     category = category,
-                    onClick = { onCategorySelected(category) }
+                    isSelected = category.strCategory == selectedCategory,
+                    onClick = { viewModel.selectCategory(category.strCategory) }
                 )
             }
         }
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable
@@ -74,6 +81,6 @@ fun ScreenPreview() {
                 "Chicken"
             ),
         ),
-        onCategorySelected = {},
+        viewModel = HomeViewModel(),
     ) {}
 }

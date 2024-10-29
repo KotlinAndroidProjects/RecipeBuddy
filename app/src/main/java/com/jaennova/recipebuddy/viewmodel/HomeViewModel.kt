@@ -26,6 +26,18 @@ class HomeViewModel : ViewModel() {
 
     private val _randomMeal = MutableLiveData<UIState<Meal>>()
     val randomMeal: LiveData<UIState<Meal>> = _randomMeal
+    private val _selectedCategory = MutableLiveData("Beef")
+    val selectedCategory: LiveData<String> = _selectedCategory
+
+    init {
+        loadMealsByCategory("Beef")
+        refreshAllData()
+    }
+
+    fun selectCategory(category: String) {
+        _selectedCategory.value = category
+        loadMealsByCategory(category)
+    }
 
     fun loadCategories() {
         _categories.value = UIState.Loading

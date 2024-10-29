@@ -45,7 +45,6 @@ fun HomeScreen(
     val categoryMealsState by viewModel.categoryMeals.observeAsState()
 
     LaunchedEffect(Unit) {
-        viewModel.loadMealsByCategory("Beef")
         viewModel.refreshAllData()
     }
 
@@ -92,13 +91,16 @@ fun HomeScreen(
                                     onClick = { navigateToDetail(meal.idMeal) }
                                 )
                             }
+
                             is UIState.Error -> {
                                 ErrorMessage(
                                     message = (randomMealState as UIState.Error).message,
                                     onRetry = { viewModel.loadRandomMeal() }
                                 )
                             }
-                            else -> { /* No hacer nada */ }
+
+                            else -> { /* No hacer nada */
+                            }
                         }
                     }
 
@@ -106,28 +108,30 @@ fun HomeScreen(
                     item {
                         when (categoriesState) {
                             is UIState.Success -> {
-                                val categories = (categoriesState as UIState.Success<List<Category>>).data
+                                val categories =
+                                    (categoriesState as UIState.Success<List<Category>>).data
                                 CategorySection(
                                     categories = categories,
-                                    onCategorySelected = { category ->
-                                        viewModel.loadMealsByCategory(category.strCategory)
-                                    }
+                                    viewModel = viewModel, // Pasar el ViewModel para manejar la categoría seleccionada
+                                    onViewAllClick = { /* Acción para ver todas las categorías */ }
                                 )
                             }
-                            is UIState.Error -> {
-                                ErrorMessage(
-                                    message = (categoriesState as UIState.Error).message,
-                                    onRetry = { viewModel.loadCategories() }
-                                )
+
+                            is UIState.Error -> ErrorMessage(
+                                message = (categoriesState as UIState.Error).message,
+                                onRetry = { viewModel.loadCategories() }
+                            )
+
+                            else -> { /* No hacer nada */
                             }
-                            else -> { /* No hacer nada */ }
                         }
                     }
 
                     // Category Meals Section
                     when (categoryMealsState) {
                         is UIState.Success -> {
-                            val meals = (categoryMealsState as UIState.Success<List<FilteredMeal>>).data
+                            val meals =
+                                (categoryMealsState as UIState.Success<List<FilteredMeal>>).data
                             items(
                                 count = (meals.size + 1) / 2, // Número de filas necesarias
                                 key = { index -> index }
@@ -169,6 +173,7 @@ fun HomeScreen(
                                 Spacer(modifier = Modifier.height(8.dp))
                             }
                         }
+
                         is UIState.Error -> {
                             item {
                                 ErrorMessage(
@@ -177,7 +182,9 @@ fun HomeScreen(
                                 )
                             }
                         }
-                        else -> { /* No hacer nada */ }
+
+                        else -> { /* No hacer nada */
+                        }
                     }
                 }
             }
