@@ -90,18 +90,25 @@ Para proporcionar una mejor comprensión visual, a continuación se muestran eje
 
 Asegúrate de que la imagen se encuentre en la ruta correcta dentro del repositorio (por ejemplo, `assets/images/home_screen.png`).
 
-![Pantalla Principal de RecipeBuddy](assets/images/home_screen.png)
+![Pantalla Principal de RecipeBuddy](assets/homeScreen.jpg)
 
-### Ejemplo de Imagen: Detalle de Receta
+### Ejemplo de Imagen: Busqueda de Recetas
 
 Una captura de pantalla que muestre la vista de detalle de una receta, en la que se puede ver la información completa, ingredientes e instrucciones.
 
-![Detalle de Receta](assets/images/detail_screen.png)
+![Busqueda de recetas](assets/searchScreen.jpg)
+
+### Ejemplo de Imagen: Filtro de Recetas
+
+Una captura de pantalla que muestre la vista de detalle de una receta, en la que se puede ver la información completa, ingredientes e instrucciones.
+
+![Filtro de recetas](assets/filterByLetter.jpg)
+
 
 ### Ejemplo de Video: Demostración de la App
 
 Para un recorrido dinámico de la aplicación, puedes incluir un enlace a un video de demostración:
-[Video de Demostración de RecipeBuddy](https://link-al-video.com)
+[Video de Demostración de RecipeBuddy](assets/videoApp.mp4)
 
 > **Consejo:** Organiza las imágenes y videos dentro de la carpeta `assets` del proyecto para mantener el repositorio limpio y fácil de mantener.
 
